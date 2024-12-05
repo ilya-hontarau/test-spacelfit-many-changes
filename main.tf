@@ -122,3 +122,7 @@ resource "random_pet" "pet31" {
   length = 5
 }
 
+resource "random_pet" "pet32" {
+  length = 5
+}
+
