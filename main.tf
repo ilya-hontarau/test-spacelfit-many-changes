@@ -402,3 +402,7 @@ resource "random_pet" "pet101" {
   length = 5
 }
 
+resource "random_pet" "pet102" {
+  length = 5
+}
+
