@@ -7,7 +7,7 @@ FILE="main.tf"
 for i in {1..150}
 do
   # Append the resource block with the iteration number
-  echo "resource \"random_pet\" \"pet$i\" {" >> $FILE
+  echo "resource \"random_pet\" \"pet$i$i\" {" >> $FILE
   echo "  length = 5" >> $FILE
   echo "}" >> $FILE
   echo "" >> $FILE
@@ -16,7 +16,11 @@ do
   git add $FILE
 
   # Commit the changes
-  git commit -m "Add random_pet resource pet$i"
+  git commit -m "Add random_pet resource pet$i$i"
+
+  git push
+
+  sleep 5
 
 done
 
